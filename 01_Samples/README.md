@@ -1,0 +1,1 @@
+Sometimes getting started is the most difficult step. Once we cross this...The destination is never too far.
