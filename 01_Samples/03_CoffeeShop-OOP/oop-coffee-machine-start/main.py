@@ -5,7 +5,6 @@ from money_machine import MoneyMachine
 menu = Menu()
 coffee_maker = CoffeeMaker()
 money_machine = MoneyMachine()
-orderItem = MenuItem()
 
 machine_is_on = True
 
@@ -19,8 +18,9 @@ while machine_is_on:
         money_machine.report()
     else:
         orderItem = menu.find_drink(choice_of_drink)
-        if orderItem is not None:
-            print(f"You have selected {choice_of_drink}.")
-            if coffee_maker.is_resource_sufficient(orderItem):
-                if money_machine.make_payment(orderItem.cost):
-                    coffee_maker.make_coffee(orderItem)
+        if type(orderItem) == MenuItem:
+            if orderItem is not None:
+                print(f"You have selected {choice_of_drink}.")
+                if coffee_maker.is_resource_sufficient(orderItem):
+                    if money_machine.make_payment(orderItem.cost):
+                        coffee_maker.make_coffee(orderItem)
