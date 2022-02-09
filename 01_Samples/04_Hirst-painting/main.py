@@ -21,11 +21,11 @@ color_list = [(202, 164, 110), (240, 245, 241), (236, 239, 243), (149, 75, 50),
               (27, 68, 102), (12, 70, 64), (107, 127, 153), (176, 192, 208), (168, 99, 102)]
 pogo = Turtle()
 
-
 setx = -300
 sety = -200
 pogo.penup()
-for _ in range (10):
+pogo.hideturtle()
+for _ in range(10):
     pogo.setpos(setx, sety)
     for _ in range(10):
         pogo.dot(35, random.choice(color_list))
