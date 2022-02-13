@@ -15,12 +15,19 @@ class Snake:
     def create_snake(self):
         setx = 0
         for _ in range(3):
-            piece = Turtle(shape="square")
-            piece.color("white")
-            piece.penup()
-            piece.setpos(setx, 0)
+            self.add_piece((setx, 0))
             setx -= 20
-            self.pieces.append(piece)
+
+    def add_piece(self, position):
+        piece = Turtle(shape="square")
+        piece.color("white")
+        piece.speed("fastest")
+        piece.penup()
+        piece.setpos(position)
+        self.pieces.append(piece)
+
+    def extend_snake(self):
+        self.add_piece(self.pieces[-1].position())
 
     def move(self):
         for piece_num in range(len(self.pieces) - 1, 0, -1):
