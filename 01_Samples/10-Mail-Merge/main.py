@@ -18,6 +18,6 @@ for invite in invites:
     line1 = []
     line1 = list(content)
     line1[0] = line1[0].replace("[name]", invite)
-    str = ""
+    filename = ""
     with open(f".\\Output\\ReadyToSend\\letter_for_{invite}.txt", "w") as send:
-        send.write(str.join(line1))
+        send.write(filename.join(line1))
