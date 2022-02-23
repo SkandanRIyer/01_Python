@@ -18,7 +18,7 @@ import json
 # places in the google developers
 
 # Use your own API key for making api request calls
-API_KEY = 'AIzaSyA5wBAk3ygtDdDl-U-Vop0cRJzNFcng4Qo'
+API_KEY = 'MY_API'
 
 # Initialising the GooglePlaces constructor
 google_places = GooglePlaces(API_KEY)

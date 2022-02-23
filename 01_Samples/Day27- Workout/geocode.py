@@ -3,7 +3,7 @@ import time
 from googlemaps import Client as GoogleMaps
 import pandas as pd
 
-gmaps = GoogleMaps('AIzaSyA5wBAk3ygtDdDl-U-Vop0cRJzNFcng4Qo')
+gmaps = GoogleMaps('MY_API')
 
 addresses = pd.read_csv("address.csv")
 addresses['long'] = ""
